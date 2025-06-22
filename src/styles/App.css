@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+
+/* Resets globais para garantir que não haja margens ou paddings indesejados */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+/* Remover padding padrão do container do Bootstrap */
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Remover padding padrão das rows do Bootstrap */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Remover padding padrão das colunas do Bootstrap */
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-sm,
+.col-md,
+.col-lg,
+.col-xl {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ocultar scrollbar em navegadores modernos */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #d7c88e;
+  background: rgb(195, 184, 124);
+  background: linear-gradient(90deg, rgb(196, 194, 150) 0%, rgb(137, 103, 75) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body {
+  padding-top: 20px; /* Altura aproximada da navbar */
+}

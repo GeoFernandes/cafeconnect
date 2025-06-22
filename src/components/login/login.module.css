@@ -1,0 +1,223 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 110px 40px 60px;
+  flex: 1;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+}
+
+.welcomeMessage {
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #663300;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: #663300;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+.button:hover,
+.button:active,
+.button:focus {
+  opacity: 0.8;
+  background: #663300;
+}
+
+.message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.message a {
+  color: #d7c88e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.message a:hover {
+  text-decoration: underline;
+}
+
+.forgotPassword {
+    text-align: right;
+    margin: -10px 0 15px;
+}
+
+.forgotPasswordButton {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.forgotPasswordButton:hover {
+    color: #663300;
+}
+
+/* Tablets e dispositivos médios */
+@media (max-width: 992px) {
+  .form {
+    max-width: 90%;
+    padding: 25px;
+  }
+
+  .registerForm {
+    max-width: 90% !important;
+  }
+}
+
+@media (max-height: 600px) {
+  .loginPage {
+    padding-top: 300px;
+  }
+}
+
+@media (max-height: 300px) {
+  .loginPage {
+    padding-top: 500px;
+  }
+}
+
+/* Tablets pequenos e dispositivos médios */
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+  }
+
+  .registerForm {
+    padding: 20px;
+  }
+
+  .welcomeMessage {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .input,
+  .button {
+    padding: 12px;
+  }
+}
+
+/* Dispositivos móveis */
+@media (max-width: 576px) {
+  .loginPage {
+    padding: 15px;
+    padding-top: 60px;
+  }
+
+  .form {
+    margin: 10px auto;
+    padding: 20px 15px;
+  }
+
+  .registerForm {
+    margin-top: 20px;
+  }
+
+  .welcomeMessage {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .input,
+  .button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .message {
+    font-size: 11px;
+  }
+}
+
+/* Dispositivos muito pequenos */
+@media (max-width: 375px) {
+  .form {
+    padding: 15px 10px;
+  }
+
+  .input,
+  .button {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .welcomeMessage {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,549 @@
+.sobreCafeConnectPage {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 1800px;
+  min-height: 100vh;
+}
+
+.contentWrapper {
+  padding: 40px 50px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(102, 51, 0, 0.1), 0 8px 16px rgba(102, 51, 0, 0.05);
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: justify;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(102, 51, 0, 0.1);
+}
+
+.contentWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.coffeeIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: bounce 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.contentWrapper h1 {
+  color: #663300;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #663300, #cc6600);
+  margin: 0 auto 30px;
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.sectionIcon {
+  font-size: 28px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.contentWrapper h2 {
+  color: #663300;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.introSection {
+  margin-bottom: 40px;
+}
+
+.sectionBlock {
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #fef7ed 0%, #ffffff 100%);
+  border-radius: 16px;
+  border-left: 4px solid #663300;
+  transition: all 0.3s ease;
+}
+
+.sectionBlock:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 51, 0, 0.15);
+}
+
+.contentWrapper p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.highlight {
+  color: #663300;
+  font-weight: 600;
+  position: relative;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #663300, #cc6600);
+  transform: scaleX(0);
+  animation: underlineExpand 1s ease-out 0.5s forwards;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(102, 51, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(102, 51, 0, 0.1);
+}
+
+.featureItem:hover {
+  transform: translateX(8px);
+  box-shadow: 0 6px 20px rgba(102, 51, 0, 0.15);
+}
+
+.featureIcon {
+  font-size: 24px;
+  flex-shrink: 0;
+  animation: rotate 4s ease-in-out infinite;
+}
+
+.interactiveGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* Aumentado de 300px */
+  gap: 25px;
+  /* Aumentado de 20px */
+  margin-top: 30px;
+}
+
+.interactiveCard {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(102, 51, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(102, 51, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.interactiveCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 51, 0, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.interactiveCard:hover::before {
+  left: 100%;
+}
+
+.interactiveCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(102, 51, 0, 0.2);
+}
+
+.cardIcon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.interactiveCard h3 {
+  color: #663300;
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.interactiveCard p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.futureSection {
+  background: linear-gradient(135deg, #663300 0%, #4d2600 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.futureSection::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+.futureHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.futureIcon {
+  font-size: 32px;
+  animation: rocket 2s ease-in-out infinite;
+}
+
+.futureSection h2 {
+  color: white;
+  margin: 0;
+  font-size: 24px;
+}
+
+.futureSection p {
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.callToAction {
+  font-size: 18px !important;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.callToAction strong {
+  color: #fbbf24;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+}
+
+.contentWrapper strong {
+  color: #4d2600;
+  font-weight: 600;
+}
+
+/* Animações */
+.animateOnScroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80px;
+  }
+}
+
+@keyframes underlineExpand {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rocket {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .sobreCafeConnectPage {
+    padding: 15px;
+    padding-top: 1820px;
+    max-width: 1200px;
+  }
+
+  .contentWrapper {
+    padding: 30px 40px;
+    margin: 15px auto;
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sobreCafeConnectPage {
+    padding-top: 2000px;
+  }
+
+  .contentWrapper {
+    padding: 30px 35px;
+    margin: 10px auto;
+    max-width: 800px;
+  }
+
+  .interactiveGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sobreCafeConnectPage {
+    padding-top: 2200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sobreCafeConnectPage {
+    padding-top: 2400px;
+  }
+}
+
+@media (max-height: 600px) {
+  .sobreCafeConnectPage {
+    padding-top: 1150px;
+  }
+}
+
+@media (max-height: 400px) {
+  .sobreCafeConnectPage {
+    padding-top: 1350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 25px 30px;
+    margin: 10px auto;
+    border-radius: 16px;
+    max-width: 95%;
+  }
+
+  .interactiveGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contentWrapper h1 {
+    font-size: 26px;
+    padding-bottom: 12px;
+  }
+
+  .contentWrapper h2 {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  .contentWrapper p,
+  .contentWrapper li {
+    font-size: 15px;
+  }
+
+  .sectionBlock {
+    padding: 20px;
+  }
+
+  .featureItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sectionHeader {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobreCafeConnectPage {
+    padding: 10px;
+    padding-top: 60px;
+  }
+
+  .contentWrapper {
+    padding: 20px 25px;
+    border-radius: 12px;
+    text-align: left;
+    max-width: 95%;
+  }
+
+  .contentWrapper h1 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .contentWrapper h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contentWrapper p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .sectionBlock {
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+
+  .featureItem {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .interactiveCard {
+    padding: 20px;
+  }
+
+  .futureSection {
+    padding: 25px;
+  }
+
+  .coffeeIcon {
+    font-size: 36px;
+  }
+
+  .sectionIcon {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,57 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 300px;
+    text-align: center;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.iconContainer {
+    margin-bottom: 20px;
+}
+
+.messageContainer {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #663300;
+}
+
+.customButtonContainer button {
+    border: none;
+    background: linear-gradient(135deg, #663300 0%, #4d2600 100%);
+    color: white;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+.customButtonContainer button:hover {
+  background: linear-gradient(135deg, #4d2600 0%, #331a00 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 51, 0, 0.3);
+}

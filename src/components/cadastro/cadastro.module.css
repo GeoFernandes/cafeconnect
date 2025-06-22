@@ -1,0 +1,563 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 40px 25px;
+}
+
+.container.step1 {
+  padding-top: 345px;
+  min-width: 600px;
+  max-width: 600px;
+}
+
+.step1 .informacoesPessoais {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.step1 .input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+.container.step2 {
+  padding-top: 150px;
+}
+
+.welcomeMessage {
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.registerForm {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  width: 100%;
+  max-width: 65%;
+  margin: 20px auto;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+.progressContainer {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #663300, #8b4513);
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  position: relative;
+}
+
+.progressFill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.stepInfo {
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.stepCounter {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  background-color: #f5f5f5;
+  padding: 5px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.stepTitle {
+  font-size: 20px;
+  color: #333;
+  margin: 5px 0;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.stepTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #663300;
+  transition: width 0.3s ease;
+}
+
+.stepTitle:hover::after {
+  width: 80px;
+}
+
+.stepDescription {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0 0;
+  animation: fadeIn 0.7s ease-out;
+}
+
+.stepContent {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  animation: fadeIn 0.5s ease-out;
+  transition: all 0.5s ease;
+}
+
+.informacoesPessoais,
+.endereco {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.endereco {
+  margin-bottom: 0px;
+}
+
+.input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 32%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 14px;
+  gap: 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  background: #e8e8e8;
+  box-shadow: 0 0 5px rgba(102, 51, 0, 0.3);
+}
+
+.errorInput {
+  border: 2px solid red;
+}
+
+.phoneContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.phoneInput {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 32%;
+  border: 0;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.phoneInput:focus {
+  background: #e8e8e8;
+  box-shadow: 0 0 5px rgba(102, 51, 0, 0.3);
+}
+
+.requisitoSenha {
+  position: relative;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #663300;
+  width: 60%;
+  border: 0;
+  padding: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 2.8rem;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.button:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.buttonSecondary {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: transparent;
+  border: 2px solid #663300;
+  color: #663300;
+  width: 30%;
+  padding: 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 2.8rem;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttonSecondary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(102, 51, 0, 0.3);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.buttonSecondary:hover::after {
+  animation: rippleSecondary 1s ease-out;
+}
+
+@keyframes rippleSecondary {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: #663300;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.confirmarSenha {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.confirmarSenha .passwordWrapper {
+  width: 45%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.passwordWrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.passwordInputContainer {
+  width: 100%;
+}
+
+.confirmarSenha .input {
+  width: 100%;
+}
+
+.confirmarSenha .togglePassword {
+  margin: 0rem 0.5rem 0.9rem 0rem;
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  padding-top: 10px;
+}
+
+.confirmarSenha .togglePassword img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 2000px) {
+  .registerForm {
+    max-width: 80%;
+  }
+
+  .input {
+    width: 45%;
+  }
+
+  .confirmarSenha .passwordWrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .button {
+    width: 70%;
+  }
+
+  .buttonSecondary {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .container.step1 {
+    padding-top: 320px;
+  }
+
+  .container.step2 {
+    padding-top: 420px;
+  }
+
+  .registerForm {
+    max-width: 95%;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button,
+  .buttonSecondary {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .passwordInputContainer {
+    margin-left: 0;
+  }
+}

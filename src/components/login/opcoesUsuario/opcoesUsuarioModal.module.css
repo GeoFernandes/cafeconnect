@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.modal {
+    position: absolute;
+    top: 96%;
+    right: 35%;
+    transform: translateX(50%);
+    margin-top: 3px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    opacity: 1 !important;
+    min-width: 160px;
+    animation: fadeIn 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) translateX(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(50%);
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: -8px;
+    right: calc(50% - 8px);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #FFFFFF;
+    filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.05));
+}
+
+.content {
+    padding: 8px;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #663300;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.option:hover {
+    background-color: #663300;
+    color: #FFFFFF;
+}
+
+.option:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+hr {
+    color: #663300;
+}
+
+.optionSair {
+    color: red;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.optionSair:hover {
+    background-color: rgb(255, 53, 71);
+    color: white !important;
+}

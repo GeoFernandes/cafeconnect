@@ -1,0 +1,722 @@
+.paginaInicial {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  padding-top: 850px;
+}
+
+/* ===== CARROSSEL PERSONALIZADO ===== */
+.carouselContainer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.customCarousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.carouselItem.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.carouselOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+}
+
+.carouselCaption {
+  position: absolute;
+  right: 15%;
+  bottom: 20%;
+  left: 15%;
+  z-index: 10;
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 1s forwards 0.5s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slideTitle {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slideDescription {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.carouselButton {
+  display: inline-block;
+  background-color: #663300;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.carouselButton:hover {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.carouselControl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.carouselControl:hover {
+  background: rgba(102, 51, 0, 0.8);
+  opacity: 1;
+}
+
+.prevControl {
+  left: 20px;
+}
+
+.nextControl {
+  right: 20px;
+}
+
+.controlIcon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeIndicator {
+  background-color: #fff;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* ===== SEÇÃO INFERIOR ===== */
+.bottomContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 30px;
+  background-color: #dfdcca;
+  margin: 0;
+  width: 100%;
+  gap: 30px;
+  position: relative;
+}
+
+.sobreDiv,
+.loginDiv,
+.promocoesDiv {
+  flex: 1;
+  min-width: 300px;
+  margin: 0;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.sobreDiv:hover,
+.loginDiv:hover,
+.promocoesDiv:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.cardLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.imageOverlayContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.imageOverlayContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.8s ease;
+}
+
+.sobreDiv:hover .imageOverlayContainer img,
+.loginDiv:hover .imageOverlayContainer img {
+  transform: scale(1.1);
+}
+
+.cardHoverEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.sobreDiv:hover .cardHoverEffect,
+.loginDiv:hover .cardHoverEffect {
+  opacity: 1;
+}
+
+.imageOverlayText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.overlayIcon {
+  font-size: 24px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.sobreDiv:hover .imageOverlayText,
+.loginDiv:hover .imageOverlayText {
+  background-color: rgba(102, 51, 0, 0.9);
+  padding: 20px 0;
+}
+
+/* ===== SEÇÃO DE PROMOÇÕES ===== */
+.promocoesDiv {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.promotionHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.promotionIcon {
+  font-size: 28px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.promocoesDiv h3 {
+  margin: 0;
+  color: #663300;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+}
+
+.promocoesDiv h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #663300, transparent);
+  border-radius: 3px;
+}
+
+.promotionsList {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.promotionItem {
+  margin: 20px 0;
+  padding-left: 35px;
+  position: relative;
+  line-height: 1.5;
+  font-size: 16px;
+  animation: fadeInRight 0.5s forwards;
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.promotionItem:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.promotionItem:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.promotionItem:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.promotionItem:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #663300;
+  font-weight: bold;
+  font-size: 18px;
+  background: rgba(102, 51, 0, 0.1);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verProdutosBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #663300;
+  color: white;
+  font-weight: bold;
+  padding: 14px 25px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: auto;
+  transition: all 0.3s ease;
+  border: 2px solid #663300;
+  width: fit-content;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.verProdutosBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.verProdutosBtn:hover::before {
+  left: 100%;
+}
+
+.verProdutosBtn:hover {
+  background-color: #4d2600;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.btnIcon {
+  transition: transform 0.3s ease;
+}
+
+.verProdutosBtn:hover .btnIcon {
+  transform: translateX(5px);
+}
+
+/* ===== SEÇÃO DE RECURSOS ===== */
+.featuresSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  gap: 30px;
+}
+
+.featureCard {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: float 3s infinite ease-in-out;
+}
+
+.featureCard h4 {
+  color: #663300;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.featureCard p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Classes de animação para elementos que entram na viewport */
+.fadeInLeft {
+  animation: fadeInLeft 0.8s forwards;
+}
+
+.fadeInRight {
+  animation: fadeInRight 0.8s forwards;
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 890px) {
+  .paginaInicial {
+    padding-top: 1300px;
+  }
+
+  .slideTitle {
+    font-size: 24px;
+  }
+
+  .slideDescription {
+    font-size: 16px;
+  }
+
+  .bottomContainer {
+    padding: 30px 20px;
+  }
+
+  .featureCard {
+    padding: 25px;
+  }
+
+  .featureCard h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .paginaInicial {
+    padding-top: 1200px;
+  }
+
+}
+
+
+
+@media (max-width: 655px) {
+  .paginaInicial {
+    padding-top: 1950px;
+  }
+
+  .carouselCaption {
+    right: 10%;
+    left: 10%;
+    padding: 20px;
+    bottom: 15%;
+  }
+
+  .slideTitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .slideDescription {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .carouselButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .bottomContainer {
+    padding: 25px 15px;
+    gap: 25px;
+  }
+
+  .sobreDiv,
+  .loginDiv,
+  .promocoesDiv {
+    flex-basis: calc(50% - 25px);
+  }
+
+  .promocoesDiv {
+    flex-basis: 100%;
+  }
+
+  .featuresSection {
+    padding: 40px 20px;
+  }
+
+  .featureCard {
+    flex-basis: calc(50% - 20px);
+    max-width: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .paginaInicial {
+    padding-top: 60px;
+  }
+
+  .carouselCaption {
+    right: 5%;
+    left: 5%;
+    bottom: 10%;
+    padding: 15px;
+  }
+
+  .slideTitle {
+    font-size: 20px;
+  }
+
+  .slideDescription {
+    font-size: 13px;
+  }
+
+  .carouselButton {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .carouselControl {
+    width: 40px;
+    height: 40px;
+  }
+
+  .controlIcon {
+    font-size: 20px;
+  }
+
+  .bottomContainer {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .sobreDiv,
+  .loginDiv,
+  .promocoesDiv {
+    flex-basis: 100%;
+  }
+
+  .promotionItem {
+    margin: 15px 0;
+  }
+
+  .featuresSection {
+    padding: 30px 15px;
+  }
+
+  .featureCard {
+    flex-basis: 100%;
+    padding: 20px;
+  }
+
+  .featureIcon {
+    font-size: 36px;
+  }
+
+  .featureCard h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .carouselCaption {
+    padding: 10px;
+  }
+
+  .slideTitle {
+    font-size: 18px;
+  }
+
+  .slideDescription {
+    font-size: 12px;
+  }
+
+  .carouselButton {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}
