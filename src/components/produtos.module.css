@@ -4,7 +4,7 @@
   min-height: 100vh;
   width: 100%;
   position: relative;
-  padding-top: 1140px;
+  padding-top: 1780px;
 }
 
 .mainContainer.fewProducts {
@@ -519,6 +519,7 @@
 .errorContainer {
   text-align: center;
   padding: 60px 40px;
+  padding-top: 100px !important;
   background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(102, 51, 0, 0.1);
@@ -712,7 +713,7 @@
   }
 
   .mainContainer.noProducts {
-    padding-top: 200px;
+    padding-top: 1750px;
   }
 
   .productList {
@@ -746,7 +747,7 @@
   }
 
   .mainContainer.noProducts {
-    padding-top: 250px;
+    padding-top: 2450px;
   }
 
   .productList {
