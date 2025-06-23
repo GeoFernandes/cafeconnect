@@ -9,12 +9,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ address }) => {
 
   useEffect(() => {
     const encodedAddress = encodeURIComponent(address)
-    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
-
-    if (!apiKey) {
-      console.error("Erro: Chave da API do Google Maps não encontrada!")
-      return
-    }
+    const apiKey = 'AIzaSyBobXH5V-HQlseQ2OxFvlz3bj5zFUmg3ok'
 
     setMapUrl(
       `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodedAddress}`
