@@ -350,7 +350,7 @@
 .searchIcon {
   position: absolute;
   right: 18px;
-  top: 50%;
+  top: 36%;
   transform: translateY(-50%);
   color: #663300;
   animation: pulse 2s ease-in-out infinite;
